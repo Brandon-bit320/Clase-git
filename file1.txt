@@ -3,4 +3,5 @@
     edad: 20, 
     nombre: "Brandon"
     monto: 1000
+    plazo credito: 96
 }
