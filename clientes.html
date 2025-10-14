@@ -8,55 +8,57 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Banco TECHZONE 💳</h1>
-    <p>Tu dinero, más seguro y más cerca de ti</p>
-  </header>
+  <button class="btn btn-primary toggle-btn d-md-none">☰</button>
 
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="index.html">TECHZONE Bank</a>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link active" href="clientes.html">Clientes</a></li>
-          <li class="nav-item"><a class="nav-link" href="cuenta.html">Cuenta</a></li>
-          <li class="nav-item"><a class="nav-link" href="seguridad.html">Seguridad</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div class="sidebar closed" id="sidebar">
+    <h2 class="text-center text-light mt-3">💳 TECHZONE</h2>
+    <ul class="nav flex-column mt-4">
+      <li><a href="index.html">🏠 Inicio</a></li>
+      <li><a href="clientes.html" class="active">👥 Clientes</a></li>
+      <li><a href="cuenta.html">💼 Cuenta</a></li>
+      <li><a href="seguridad.html">🔐 Seguridad</a></li>
+    </ul>
+  </div>
 
-  <main class="container mt-4">
-    <h2>Nuestros Clientes</h2>
-    <p>Acceso a los servicios personalizados:</p>
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="card p-3 shadow-sm">
-          <h5 class="text-primary">Personas</h5>
-          <p>Cuentas personales, préstamos y tarjetas de crédito.</p>
-          <button class="btn btn-primary btn-sm">Ver más</button>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="content">
+    <header>
+      <h1>Clientes</h1>
+      <p>Elige el tipo de cuenta que mejor se adapte a ti</p>
+    </header>
+
+    <main class="container mt-5">
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="card p-3 shadow-sm">
+            <h5 class="text-primary">👤 Personal</h5>
+            <p>Cuentas corrientes y de ahorro para tus finanzas personales.</p>
+            <button class="btn btn-primary btn-sm">Ver más</button>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3 shadow-sm">
+            <h5 class="text-primary">🏢 Empresas</h5>
+            <p>Soluciones integrales para la gestión financiera de tu negocio.</p>
+            <button class="btn btn-primary btn-sm">Ver más</button>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3 shadow-sm">
+            <h5 class="text-primary">🎓 Estudiantes</h5>
+            <p>Cuentas sin comisiones y beneficios para jóvenes universitarios.</p>
+            <button class="btn btn-primary btn-sm">Ver más</button>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card p-3 shadow-sm">
-          <h5 class="text-primary">Empresas</h5>
-          <p>Soluciones empresariales para tu negocio.</p>
-          <button class="btn btn-primary btn-sm">Ver más</button>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card p-3 shadow-sm">
-          <h5 class="text-primary">Estudiantes</h5>
-          <p>Cuentas sin comisiones y beneficios especiales.</p>
-          <button class="btn btn-primary btn-sm">Ver más</button>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Banco TECHZONE. Todos los derechos reservados.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Banco TECHZONE. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
