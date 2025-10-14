@@ -8,40 +8,46 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Banco TECHZONE 💳</h1>
-    <p>Tu dinero, más seguro y más cerca de ti</p>
-  </header>
+  <button class="btn btn-primary toggle-btn d-md-none">☰</button>
 
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="index.html">TECHZONE Bank</a>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
-          <li class="nav-item"><a class="nav-link" href="cuenta.html">Cuenta</a></li>
-          <li class="nav-item"><a class="nav-link active" href="seguridad.html">Seguridad</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main class="container mt-4">
-    <h2>Seguridad</h2>
-    <p>Protegemos tus datos con tecnología avanzada.</p>
-    <ul>
-      <li>Cifrado de extremo a extremo.</li>
-      <li>Verificación en dos pasos.</li>
-      <li>Alertas en tiempo real.</li>
+  <div class="sidebar closed" id="sidebar">
+    <h2 class="text-center text-light mt-3">💳 TECHZONE</h2>
+    <ul class="nav flex-column mt-4">
+      <li><a href="index.html">🏠 Inicio</a></li>
+      <li><a href="clientes.html">👥 Clientes</a></li>
+      <li><a href="cuenta.html">💼 Cuenta</a></li>
+      <li><a href="seguridad.html" class="active">🔐 Seguridad</a></li>
     </ul>
-    <div class="alert alert-info mt-3">
-      ⚠️ Nunca compartas tus claves con nadie.
-    </div>
-  </main>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Banco TECHZONE. Todos los derechos reservados.</p>
-  </footer>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="content">
+    <header>
+      <h1>Seguridad</h1>
+      <p>Protegemos tus datos con la mejor tecnología</p>
+    </header>
+
+    <main class="container mt-5">
+      <div class="card p-4 shadow-sm">
+        <h4>🔒 Medidas de seguridad implementadas:</h4>
+        <ul>
+          <li>Cifrado de extremo a extremo en todas las transacciones.</li>
+          <li>Autenticación en dos pasos para tu cuenta.</li>
+          <li>Alertas en tiempo real sobre movimientos sospechosos.</li>
+          <li>Protección contra fraudes e intentos de acceso no autorizado.</li>
+        </ul>
+        <div class="alert alert-info mt-3">
+          ⚠️ Consejo: Nunca compartas tu contraseña ni tus datos de acceso.
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Banco TECHZONE. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
