@@ -1,122 +1,118 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa;
-  display: flex;
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
 }
 
-/* Sidebar */
 .sidebar {
-  width: 220px;
-  background: #004085;
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 20px;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+  height: 100%;
+  width: 240px;
+  background-color: #0d6efd;
+  color: white;
+  padding-top: 1rem;
+  transition: all 0.3s ease;
   z-index: 1000;
 }
 
-.sidebar.closed {
-  transform: translateX(-100%);
+.sidebar h2 {
+  font-size: 1.3rem;
+  text-align: center;
 }
 
-/* Botón del menú */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  border-left: 4px solid transparent;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-left: 4px solid #ffc107;
+}
+
+.content {
+  flex: 1;
+  margin-left: 240px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Header y Footer */
+header {
+  background: #e9ecef;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #666;
+}
+
+/* Botón de menú */
 .toggle-btn {
   position: fixed;
   top: 15px;
   left: 15px;
   z-index: 1100;
-  border-radius: 50%;
-  padding: 8px 12px;
-  font-size: 20px;
+  display: none;
 }
 
-/* Fondo oscuro (overlay) */
+/* Overlay para móviles */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.5);
   display: none;
   z-index: 900;
-  transition: opacity 0.3s;
 }
 
-.overlay.active {
-  display: block;
-}
-
-/* Enlaces */
-.sidebar h2 {
-  font-size: 1.3rem;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar a {
-  color: #d9eaff;
-  text-decoration: none;
-  display: block;
-  padding: 10px 20px;
-  transition: background 0.3s;
-  font-weight: 500;
-}
-
-.sidebar a:hover,
-.sidebar a.active {
-  background-color: #007bff;
-  color: white;
-}
-
-/* Contenido */
-.content {
-  margin-left: 220px;
-  width: calc(100% - 220px);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  transition: margin-left 0.3s ease;
-}
-
+/* ----------- MODO MÓVIL ----------- */
 @media (max-width: 768px) {
+  .sidebar {
+    left: -240px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
   .content {
     margin-left: 0;
-    width: 100%;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+
+  .overlay.show {
+    display: block;
   }
 }
 
-header {
-  background: linear-gradient(90deg, #004085, #007bff);
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
 
-.card {
-  border-radius: 15px;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-footer {
-  background-color: #004085;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: auto;
-}
